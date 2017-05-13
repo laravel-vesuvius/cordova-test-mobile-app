@@ -1,0 +1,2 @@
+
+docker-compose exec cot_cordova bash

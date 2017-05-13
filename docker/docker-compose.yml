@@ -1,0 +1,11 @@
+cot_cordova:
+    build: ./cordova
+    ports:
+        - 8001:8001
+    environment:
+        DISPLAY: unix:0 # enable display support
+    volumes:
+        - ../:/var/www
+        - /tmp/.X11-unix:/tmp/.X11-unix # enable display support
+    working_dir: /var/www
+    tty: true
