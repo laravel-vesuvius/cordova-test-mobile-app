@@ -33,7 +33,7 @@
               </f7-nav-right>
             </f7-navbar>
 
-            <!--todo add component for map-->
+            <Map></Map>
           </f7-page>
         </f7-pages>
       </f7-view>
@@ -42,5 +42,11 @@
 </template>
 
 <script>
-  export default {}
+  import Map from './Map.vue';
+
+  export default {
+    components: {
+      Map: Map
+    }
+  }
 </script>

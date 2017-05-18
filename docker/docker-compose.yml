@@ -1,11 +1,16 @@
 cot_cordova:
     build: ./cordova
     ports:
-        - 8001:8001
+        - 5584:5584
+        - 5585:5585
     environment:
         DISPLAY: unix:0 # enable display support
     volumes:
         - ../:/var/www
         - /tmp/.X11-unix:/tmp/.X11-unix # enable display support
+    devices:
+        - /dev/kvm:/dev/kvm
+        - /dev/snd:/dev/snd
+        - /dev/net/tun:/dev/net/tun
     working_dir: /var/www
     tty: true

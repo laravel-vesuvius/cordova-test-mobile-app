@@ -1,24 +1,16 @@
-// Import Vue
+import api from './services/api'
 import Vue from 'vue'
-
-// Import F7
 import Framework7 from 'framework7'
-
-// Import F7 Vue Plugin
 import Framework7Vue from 'framework7-vue'
-
-// Import Material Theme
 import Framework7Theme from 'framework7/dist/css/framework7.material.min.css'
 import Framework7ThemeColors from 'framework7/dist/css/framework7.material.colors.min.css'
-
-// Import Routes
 import Routes from './routes.js'
-
-// Import App Component
 import App from './App.vue'
 
 // Init F7 Vue Plugin
 Vue.use(Framework7Vue);
+
+api.setTokenCheck();
 
 // Init App
 new Vue({

@@ -1,6 +1,8 @@
 ## Configuration
 
-Copy `config.xml.dist` to `config.xml` and fill environment specific variables values.
+Copy nex files and fill environment specific values for variables.
+* `config.xml.dist` to `config.xml` 
+* `src/config.dist.js` to `src/config.js`
 
 ## Compile scripts
 
