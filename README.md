@@ -2,6 +2,13 @@
 
 Copy `config.xml.dist` to `config.xml` and fill environment specific variables values.
 
+## Compile scripts
+
+```
+npm run build
+```
+
+
 ## Run emulator instructions
 
 Install local dependencies:

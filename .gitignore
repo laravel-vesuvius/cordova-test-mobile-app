@@ -4,3 +4,8 @@
 /platforms/
 /plugins/
 /config.xml
+.DS_Store
+/dist/
+/npm-debug.log
+/yarn-error.log
+/www/dist/
