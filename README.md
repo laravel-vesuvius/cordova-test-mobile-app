@@ -4,13 +4,6 @@ Copy nex files and fill environment specific values for variables.
 * `config.xml.dist` to `config.xml` 
 * `src/config.dist.js` to `src/config.js`
 
-## Compile scripts
-
-```
-npm run build
-```
-
-
 ## Run emulator instructions
 
 Install local dependencies:
@@ -32,7 +25,7 @@ Download Android SDK using `sudo /opt/android/tools/android sdk`.
 
 Create emulator image:
 ```
-android create avd -n <name> -t <targetID>
+/opt/android/tools/android avd
 ```
 
 Fix kvm permissions:
@@ -42,5 +35,10 @@ sudo chown root:libvirtd /dev/kvm
 
 Run emulator:
 ```
-SHELL=/bin/bash cordova emulate android
+npm run emulate
+```
+
+Stop all emulators
+```
+adb devices | grep emulator | cut -f1 | while read line; do adb -s $line emu kill; done
 ```

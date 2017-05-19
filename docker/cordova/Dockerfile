@@ -25,7 +25,7 @@ ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
 ENV ANDROID_SDK_URL="https://dl.google.com/android/repository/tools_r25.2.5-linux.zip" \
     ANDROID_BUILD_TOOLS_VERSION=25.0.3 \
     ANDROID_APIS="android-22,android-23,android-24,android-25" \
-    ANDROID_IMAGES="sys-img-x86_64-android-22" \
+    ANDROID_IMAGES="sys-img-x86_64-google_apis-25" \
     ANT_HOME="/usr/share/ant" \
     MAVEN_HOME="/usr/share/maven" \
     GRADLE_HOME="/usr/share/gradle" \

@@ -6,10 +6,13 @@
         content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta http-equiv="Content-Security-Policy" content="default-src gap://ready file://* *; style-src 'self' http://* https://* 'unsafe-inline'; script-src 'self' http://* https://* 'unsafe-inline' 'unsafe-eval'; img-src 'self' data: *">
   <title>Cordova test</title>
 </head>
 <body>
 <div id="app"></div>
+<script type="text/javascript" src="cordova.js"></script>
+<script src="http://maps.google.com/maps/api/js?sensor=true&libraries=geometry"></script>
 <script src="dist/build.js"></script>
 </body>
 </html>

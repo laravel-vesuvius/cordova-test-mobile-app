@@ -1,4 +1,4 @@
-import api from './services/api'
+import Auth from './services/auth'
 import Vue from 'vue'
 import Framework7 from 'framework7'
 import Framework7Vue from 'framework7-vue'
@@ -10,21 +10,24 @@ import App from './App.vue'
 // Init F7 Vue Plugin
 Vue.use(Framework7Vue);
 
-api.setTokenCheck();
+Auth.setTokenCheck();
 
-// Init App
-new Vue({
+document.addEventListener('deviceready', function () {
+  // Init App
+  new Vue({
     el: '#app',
     template: '<app/>',
     // Init Framework7 by passing parameters here
     framework7: {
-        root: '#app',
+      root: '#app',
       /* Uncomment to enable Material theme: */
-        material: true,
-        routes: Routes,
+      material: true,
+      routes: Routes,
+      domCache: false
     },
     // Register App Component
     components: {
-        app: App
+      app: App
     }
-});
+  });
+}, false);
