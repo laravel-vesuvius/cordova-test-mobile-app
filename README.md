@@ -23,8 +23,9 @@ Run `xhost +` to allow use screen for root user.
 
 Download Android SDK using `sudo /opt/android/tools/android sdk`.
 
-Create emulator image:
+Download SDK and images what you need and create AVD:
 ```
+sudo /opt/android/tools/android sdk
 /opt/android/tools/android avd
 ```
 
@@ -38,7 +39,7 @@ Run emulator:
 npm run emulate
 ```
 
-Stop all emulators
+Stop all emulators:
 ```
 adb devices | grep emulator | cut -f1 | while read line; do adb -s $line emu kill; done
 ```
