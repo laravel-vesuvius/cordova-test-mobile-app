@@ -16,6 +16,10 @@ export default class {
       this.getCurrentPosition().then((currentPin) => {
         let currentLatLng = new google.maps.LatLng(currentPin.lat, currentPin.lng);
 
+        if (!(latLng instanceof google.maps.LatLng)) {
+          latLng = new google.maps.LatLng(latLng.lat, latLng.lng);
+        }
+
         resolve(google.maps.geometry.spherical.computeDistanceBetween(latLng, currentLatLng));
       }).catch((error) => {
         reject(error);
@@ -50,7 +54,7 @@ export default class {
           resolve({
             city: result.getComponentByType('administrative_area_level_1').long_name,
             country: result.getComponentByType('country').long_name,
-            formatted_address: rawResults.formatted_address
+            formatted_address: rawResults[0] ? rawResults[0].formatted_address : null
           });
 
           return;
