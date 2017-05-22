@@ -1,6 +1,6 @@
 ## Configuration
 
-Copy nex files and fill environment specific values for variables.
+Copy next files and fill environment specific values for variables:
 * `config.xml.dist` to `config.xml` 
 * `src/config.dist.js` to `src/config.js`
 
@@ -20,8 +20,6 @@ docker-compose exec cot_cordova bash
 ```
 
 Run `xhost +` to allow use screen for root user.
-
-Download Android SDK using `sudo /opt/android/tools/android sdk`.
 
 Download SDK and images what you need and create AVD:
 ```
